@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <TextView android:text="Tài khoản quản trị" android:textSize="18sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="✕" android:textSize="18sp" android:textColor="#757575" android:textStyle="bold" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <!-- Badge -->
+        <TextView android:text="Quản trị viên" android:textSize="10sp" android:textStyle="bold" android:textColor="#2E7D32" android:background="#E8F5E9" android:paddingStart="10dp" android:paddingEnd="10dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_marginBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- Tên & Email -->
+        <TextView android:text="Thu Hà" android:textStyle="bold" android:textColor="#1E392A" android:textSize="16sp" android:layout_marginBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="thuha@plantcare.vn" android:textSize="13sp" android:textColor="#757575" android:layout_marginBottom="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- Nút Đăng xuất quản trị -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#E8F5E9"
+            android:text="Đăng xuất quản trị"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:elevation="0dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ghi chú footer -->
+        <TextView android:text="Trở về Đăng nhập. Không chuyển vào khu vườn của người dùng." android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

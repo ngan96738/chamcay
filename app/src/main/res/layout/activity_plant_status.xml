@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="←"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1E392A"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16 · Tình trạng cây"
+                    android:textSize="12sp"
+                    android:textColor="#757575" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tình trạng cây"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E392A" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Thông tin cơ bản của cây -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_monstera" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monstera"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#1E392A" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trồng ngày 01/09/2026"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:layout_marginTop="2dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tuổi cây: 37 ngày"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E392A"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Card Trạng thái tổng quan -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#E8F5E9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🫀"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Đang phát triển tốt"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#1E392A" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cập nhật 08/10/2026 · 09:40"
+                            android:textSize="11sp"
+                            android:textColor="#2E7D32" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Các chỉ số môi trường hiện trong khoảng phù hợp. Tiếp tục quan sát lá và đất."
+                    android:textSize="13sp"
+                    android:textColor="#1E392A" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Lưới 3 thông số cảm biến -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="24dp">
+
+            <!-- Độ ẩm đất -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardStrokeWidth="1dp"
+                app:cardStrokeColor="#E0E0E0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:text="💧" android:textSize="16sp" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="52%" android:textStyle="bold" android:textSize="20sp" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Độ ẩm đất" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Nhiệt độ -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardStrokeWidth="1dp"
+                app:cardStrokeColor="#E0E0E0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:text="🌡️" android:textSize="16sp" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="29°C" android:textStyle="bold" android:textSize="20sp" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Nhiệt độ" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Độ ẩm không khí -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardStrokeWidth="1dp"
+                app:cardStrokeColor="#E0E0E0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:text="🌬️" android:textSize="16sp" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="68%" android:textStyle="bold" android:textSize="20sp" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Độ ẩm không khí" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Chăm sóc gần đây -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chăm sóc gần đây"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1E392A"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardStrokeWidth="1dp"
+            app:cardStrokeColor="#E0E0E0">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:text="💧" android:textSize="14sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Tưới 350 ml · 06/10 · 07:30" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:text="✂️" android:textSize="14sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Cắt tỉa lá già · 04/10 · 09:00" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:text="🌱" android:textSize="14sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Bón phân hữu cơ · 02/10 · 08:00" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Chú giải trạng thái -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chú giải trạng thái"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1E392A"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:gravity="start">
+
+            <!-- Badge: Đang phát triển tốt -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="#E8F5E9"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đang phát triển tốt"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Badge: Cần theo dõi -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="#FFF9C4"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cần theo dõi"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#F57F17"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Badge: Cần chăm sóc -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFEBEE"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cần chăm sóc"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#D32F2F"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Nút Tư vấn AI -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#2E7D32"
+            android:text="✨ Tư vấn AI"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>

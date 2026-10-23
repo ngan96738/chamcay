@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xóa cây Monstera?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1E392A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="✕"
+                android:textSize="18sp"
+                android:textColor="#757575"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Nội dung cảnh báo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Cây, nhật ký chăm sóc và ảnh hành trình của Monstera sẽ bị xóa khỏi khu vườn của bạn."
+            android:textColor="#757575"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Thao tác này không thể hoàn tác."
+            android:textColor="#D32F2F"
+            android:textSize="13sp" />
+
+        <!-- Cụm 2 nút thao tác -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Nút Hủy -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#E8F5E9"
+                android:text="Hủy"
+                android:textColor="#2E7D32"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="0dp" />
+
+            <!-- Nút Xóa cây -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="#FFEBEE"
+                android:text="Xóa cây"
+                android:textColor="#D32F2F"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:elevation="0dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

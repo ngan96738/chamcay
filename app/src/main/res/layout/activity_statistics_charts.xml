@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView android:text="←" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="24 · Thống kê" android:textSize="12sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Biểu đồ" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tabs Chế độ xem -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="#EFEBE9"
+            android:padding="3dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="10dp"
+            android:weightSum="3">
+
+            <TextView android:text="Ngày" android:background="@android:color/white" android:textStyle="bold" android:textColor="#1E392A" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="Tuần" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="Tháng" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <TextView android:text="01–08/10/2026 · Tổng hợp theo ngày" android:textSize="11sp" android:textColor="#757575" android:layout_marginBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- 1. Biểu đồ Độ ẩm đất (Đường) -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <TextView android:text="Độ ẩm đất · Monstera" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="52% TB" android:textSize="11sp" android:textStyle="bold" android:textColor="#2E7D32" android:background="#E8F5E9" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="140dp" android:background="#F9F9F9" android:gravity="center" android:layout_marginBottom="8dp">
+                    <TextView android:text="(Vùng vẽ LineChart)" android:textColor="#BDBDBD" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="Ngày trong tháng 10 - Đơn vị: %" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 2. Biểu đồ Tưới nước (Cột) -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <TextView android:text="Tưới nước · Tất cả cây" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="8 lần" android:textSize="11sp" android:textStyle="bold" android:textColor="#2E7D32" android:background="#E8F5E9" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="140dp" android:background="#F9F9F9" android:gravity="center" android:layout_marginBottom="8dp">
+                    <TextView android:text="(Vùng vẽ BarChart)" android:textColor="#BDBDBD" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="Ngày trong tháng 10 - Đơn vị: lần" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 3. Thống kê Bón phân (Danh sách) -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="🌱" android:textSize="16sp" android:layout_marginEnd="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Bón phân · 2 lần" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                    <TextView android:text="Monstera" android:textColor="#424242" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="02/10 - 1 lần" android:textColor="#757575" android:textSize="13sp" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Lưỡi hổ" android:textColor="#424242" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="01/10 - 1 lần" android:textColor="#757575" android:textSize="13sp" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Footer -->
+        <TextView android:text="Chỉ tính các hoạt động đã lưu trong nhật ký. Lịch chưa hoàn thành không được tính." android:textSize="11sp" android:textColor="#757575" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

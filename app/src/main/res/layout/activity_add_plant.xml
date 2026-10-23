@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="48dp"> <!-- Khoảng cách an toàn tránh camera -->
+
+        <!-- Header: Nút Back, Tiêu đề và Nút Đóng (X) -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="←"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E392A"
+                    android:layout_marginEnd="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="07 · Thêm cây mới"
+                    android:textSize="12sp"
+                    android:textColor="#757575" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="✕"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#757575" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm cây mới"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1E392A"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Phần Ảnh cây trồng -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_monstera" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thêm ảnh cho cây"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E392A" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chọn ảnh từ thư viện"
+                    android:textSize="12sp"
+                    android:textColor="#2E7D32"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tên cây -->
+        <TextView android:text="Tên cây" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:minHeight="48dp"
+                android:hint="Ví dụ: Monstera, Xương rồng..."
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:inputType="text" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Loại cây -->
+        <TextView android:text="Loại cây" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Chọn loại cây (Cây lá, Sen đá...)" android:textSize="14sp" android:textColor="#9E9E9E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▾" android:textSize="16sp" android:textColor="#757575"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ngày trồng -->
+        <TextView android:text="Ngày trồng" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:background="@null" android:hint="08/10/2026" android:textSize="14sp" android:inputType="date" android:minHeight="48dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅" android:textSize="16sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Vị trí đặt cây -->
+        <TextView android:text="Vị trí đặt cây" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:minHeight="48dp"
+                android:hint="Ví dụ: Cửa sổ phòng khách"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:inputType="text" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Điều kiện ánh sáng -->
+        <TextView android:text="Điều kiện ánh sáng" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Ánh sáng gián tiếp" android:textSize="14sp" android:textColor="#1E392A"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▾" android:textSize="16sp" android:textColor="#757575"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ghi chú -->
+        <TextView android:text="Ghi chú" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="20dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="Nhập thông tin chăm sóc lưu ý..."
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:inputType="textMultiLine" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Nút Lưu cây -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#2E7D32"
+            android:text="Thêm cây mới"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Hủy thao tác -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:text="Hủy bỏ"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

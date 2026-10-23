@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm cây"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1E392A" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="X"
+                android:textSize="18sp"
+                android:textColor="#757575"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Huy hiệu trạng thái -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chế độ thêm mới · Biểu mẫu 07"
+            android:textSize="10sp"
+            android:textColor="#2E7D32"
+            android:background="#E8F5E9"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Field: Tên cây -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên cây"
+            android:textStyle="bold"
+            android:textColor="#1E392A"
+            android:textSize="12sp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardStrokeWidth="1dp"
+            app:cardStrokeColor="#E0E0E0">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:background="@null"
+                android:hint="Nhập tên cây"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:inputType="text" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Field: Ngày trồng -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày trồng"
+            android:textStyle="bold"
+            android:textColor="#1E392A"
+            android:textSize="12sp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardStrokeWidth="1dp"
+            app:cardStrokeColor="#E0E0E0">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:background="@null"
+                    android:hint="08/10/2026"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:inputType="date" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:text="📅"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ghi chú bổ sung -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Cùng các trường Loại cây, Vị trí đặt cây, Điều kiện ánh sáng và Ghi chú. Không hiển thị Xóa cây ở chế độ này."
+            android:textColor="#757575"
+            android:textSize="11sp" />
+
+        <!-- Nút Lưu -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#2E7D32"
+            android:text="Lưu cây"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingTop="48dp"> <!-- Khoảng cách an toàn cho camera -->
+
+        <!-- Nút Back và Số bước -->
+        <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="←" android:textSize="24sp" android:textColor="#1E392A" android:textStyle="bold" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="03 · Xác thực" android:textColor="#757575" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView android:text="Tạo tài khoản" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- Tiêu đề phụ -->
+        <TextView android:text="Bắt đầu một khu vườn mới" android:textSize="20sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="Lưu lại những khoảnh khắc xanh, theo cách của bạn." android:textColor="#757575" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- Ô nhập Họ và tên -->
+        <TextView android:text="Họ và tên" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:background="@null" android:hint="Nguyên" android:textSize="14sp" android:inputType="textPersonName"/>
+                <TextView android:text="👤" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ô nhập Email -->
+        <TextView android:text="Email" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:background="@null" android:hint="nguyen@gmail.com" android:textSize="14sp" android:inputType="textEmailAddress"/>
+                <TextView android:text="✉️" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ô nhập Mật khẩu -->
+        <TextView android:text="Mật khẩu" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:background="@null" android:hint="••••••••" android:inputType="textPassword" android:textSize="14sp"/>
+                <TextView android:text="👁️" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView android:text="Ít nhất 8 ký tự, gồm chữ và số." android:textSize="10sp" android:textColor="#757575" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- Ô nhập Xác nhận mật khẩu -->
+        <TextView android:text="Xác nhận mật khẩu" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:background="@null" android:hint="••••••••" android:inputType="textPassword" android:textSize="14sp"/>
+                <TextView android:text="👁️" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Hộp thông báo màu xanh nhạt -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:cardCornerRadius="8dp" app:cardBackgroundColor="#E8F5E9" app:cardElevation="0dp">
+            <TextView android:text="Tài khoản cá nhân chỉ quản lý cây và nhật ký của chính bạn." android:textColor="#2E7D32" android:textSize="12sp" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Nút Đăng ký -->
+        <Button android:text="Đăng ký" android:backgroundTint="#2E7D32" android:textColor="@android:color/white" android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="55dp" app:cornerRadius="12dp"/>
+
+        <TextView android:text="Đã có tài khoản? Đăng nhập" android:textColor="#757575" android:textSize="12sp" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:layout_marginBottom="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

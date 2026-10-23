@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp">
+            <TextView android:text="Cài đặt thông báo" android:textSize="18sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="✕" android:textSize="18sp" android:textColor="#757575" android:textStyle="bold" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <!-- Item 1: Nhắc lịch chăm sóc -->
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+            <TextView android:text="Nhắc lịch chăm sóc" android:textSize="14sp" android:textColor="#1E392A" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:minHeight="48dp" android:minWidth="48dp"/>
+        </RelativeLayout>
+
+        <!-- Item 2: Cảnh báo cảm biến -->
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+            <TextView android:text="Cảnh báo cảm biến" android:textSize="14sp" android:textColor="#1E392A" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:minHeight="48dp" android:minWidth="48dp"/>
+        </RelativeLayout>
+
+        <!-- Item 3: Gợi ý chăm sóc -->
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+            <TextView android:text="Gợi ý chăm sóc" android:textSize="14sp" android:textColor="#1E392A" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:minHeight="48dp" android:minWidth="48dp"/>
+        </RelativeLayout>
+
+        <!-- Thời gian yên lặng -->
+        <TextView android:text="Thời gian yên lặng" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_marginBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="22:00 – 07:00" android:textSize="14sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <TextView android:text="🌙" android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Nút Lưu -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#2E7D32"
+            android:text="Lưu cài đặt"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

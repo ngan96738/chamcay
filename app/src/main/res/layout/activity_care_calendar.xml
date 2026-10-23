@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottomNav"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="48dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:text="Lịch chăm sóc" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="13 · Lịch &amp; Thông báo" android:textSize="12sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_marginBottom="16dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardCornerRadius="12dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Cây: Tất cả cây" android:textSize="14sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                    <TextView android:text="▾" android:textSize="16sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- KHUNG LỊCH ĐẦY ĐỦ THÁNG 10 -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+                        <TextView android:text="‹" android:textSize="20sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="Tháng 10, 2026" android:textSize="14sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_centerInParent="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="›" android:textSize="20sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <!-- Header Thứ -->
+                    <LinearLayout android:orientation="horizontal" android:weightSum="7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                        <TextView android:text="T2" android:textSize="11sp" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                        <TextView android:text="T3" android:textSize="11sp" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                        <TextView android:text="T4" android:textSize="11sp" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                        <TextView android:text="T5" android:textSize="11sp" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                        <TextView android:text="T6" android:textSize="11sp" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                        <TextView android:text="T7" android:textSize="11sp" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                        <TextView android:text="CN" android:textSize="11sp" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Hàng 1 -->
+                    <LinearLayout android:orientation="horizontal" android:weightSum="7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:text="" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="1" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="2\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="3\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="4" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Hàng 2 -->
+                    <LinearLayout android:orientation="horizontal" android:weightSum="7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:text="5\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="6\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="7\n " android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+
+                        <!-- Ô ngày 8 đã được tinh chỉnh chống lệch -->
+                        <RelativeLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp">
+                            <!-- Hình tròn vẽ độc lập ở dưới -->
+                            <View
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_circle_green"
+                                android:layout_centerInParent="true"/>
+                            <!-- Chữ đè lên trên, đồng bộ cao 44dp giống hệt số 7 và 9 -->
+                            <TextView
+                                android:text="8\n•"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"/>
+                        </RelativeLayout>
+
+                        <TextView android:text="9\n " android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="10\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="11\n " android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Hàng 3 -->
+                    <LinearLayout android:orientation="horizontal" android:weightSum="7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:text="12\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="13" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="14" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="15" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="16\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="17" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="18" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Hàng 4 -->
+                    <LinearLayout android:orientation="horizontal" android:weightSum="7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:text="19" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="20" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="21" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="22\n•" android:textSize="13sp" android:textColor="#2E7D32" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="23" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="24" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="25" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Hàng 5 -->
+                    <LinearLayout android:orientation="horizontal" android:weightSum="7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                        <TextView android:text="26" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="27" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="28" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="29" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="30" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="31" android:textSize="13sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                        <TextView android:text="" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:gravity="center"/>
+                    </LinearLayout>
+
+                    <TextView android:text="● Có lịch chăm sóc · Hôm nay: 08/10" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#2E7D32"
+                android:text="+ Thêm lịch"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="16dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:gravity="center_vertical">
+
+        <TextView android:text="🏠\nTrang chủ" android:gravity="center" android:textColor="#757575" android:textSize="11sp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:text="🌱\nCây của tôi" android:gravity="center" android:textColor="#757575" android:textSize="11sp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:text="📅\nLịch" android:gravity="center" android:textColor="#2E7D32" android:textSize="11sp" android:textStyle="bold" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:text="📈\nThống kê" android:gravity="center" android:textColor="#757575" android:textSize="11sp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:text="👤\nTài khoản" android:gravity="center" android:textColor="#757575" android:textSize="11sp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

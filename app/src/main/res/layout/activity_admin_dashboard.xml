@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1">
+
+    <!-- Phần nội dung cuộn được -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adminBottomNav"
+        android:fillViewport="true"
+        android:paddingTop="48dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                    <TextView android:text="27 · Quản trị" android:textSize="12sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Tổng quan quản trị" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="🛡️" android:textSize="24sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Tag Quản trị viên & Thời gian -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quản trị viên"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"
+                    android:background="#E8F5E9"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08/10/2026 · 09:41"
+                    android:textSize="12sp"
+                    android:textColor="#757575"/>
+            </LinearLayout>
+
+            <!-- Card Banner: Hệ thống hoạt động tốt -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#E8F5E9">
+                <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Hệ thống đang hoạt động tốt" android:textStyle="bold" android:textSize="16sp" android:textColor="#1E392A" android:layout_marginBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Số liệu tổng hợp trên toàn hệ thống." android:textSize="12sp" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Grid 2x2 Thống kê -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="12dp">
+                <!-- Tổng số người dùng -->
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                    <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:text="Tổng số người dùng" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="128" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="120 đang hoạt động" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- Tổng số cây -->
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                    <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:text="Tổng số cây" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="436" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="Thuộc các vườn cá nhân" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="16dp">
+                <!-- Tổng số nhật ký -->
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                    <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:text="Tổng số nhật ký" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="1.284" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="Chỉ thống kê số lượng" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- Số thiết bị IoT -->
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                    <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:text="Số thiết bị IoT" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="36" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="32 thiết bị trực tuyến" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Card Hoạt động hệ thống gần đây -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardStrokeWidth="1dp"
+                app:cardStrokeColor="#E0E0E0">
+                <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Hoạt động hệ thống gần đây" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_marginBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:text="👥" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                            <TextView android:text="3 tài khoản mới được tạo" android:textStyle="bold" android:textColor="#1E392A" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="08/10/2026 · 09:20" android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:text="📶" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                            <TextView android:text="1 thiết bị ESP32 kết nối" android:textStyle="bold" android:textColor="#1E392A" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="08/10/2026 · 08:45" android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:text="💾" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
+                            <TextView android:text="Sao lưu hệ thống thành công" android:textStyle="bold" android:textColor="#1E392A" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:text="08/10/2026 · 02:00" android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Nút Quản lý người dùng -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#2E7D32"
+                android:text="👥 Quản lý người dùng"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Footer Warning -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quản trị viên không xem nội dung nhật ký, ảnh hành trình hay tư vấn riêng của người dùng."
+                android:textSize="11sp"
+                android:textColor="#757575"
+                android:lineSpacingExtra="2dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Thanh điều hướng dưới cùng -->
+    <LinearLayout
+        android:id="@+id/adminBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:elevation="8dp">
+
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+            <TextView android:text="🛡️" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Tổng quan" android:textSize="10sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+            <TextView android:text="👥" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Người dùng" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+            <TextView android:text="🚪" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Tài khoản / Thoát" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

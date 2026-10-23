@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView android:text="←" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="22 · IoT" android:textSize="12sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Chi tiết cảm biến" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Thẻ Tag & Thời gian -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monstera · ESP32"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:background="#E8F5E9"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08/10/2026"
+                android:textSize="12sp"
+                android:textColor="#757575"/>
+        </LinearLayout>
+
+        <!-- Tabs Bộ lọc thời gian -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="#EFEBE9"
+            android:padding="3dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="10dp"
+            android:weightSum="3">
+
+            <TextView android:text="Hôm nay" android:background="@android:color/white" android:textStyle="bold" android:textColor="#1E392A" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="7 ngày" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="30 ngày" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- 1. Biểu đồ Độ ẩm đất -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+                    <TextView android:text="Độ ẩm đất" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="52%" android:textStyle="bold" android:textColor="#2E7D32" android:textSize="18sp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <!-- Không gian chứa LineChart sau này -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="140dp" android:orientation="vertical" android:gravity="center" android:background="#F9F9F9">
+                    <TextView android:text="(Vùng vẽ biểu đồ LineChart)" android:textColor="#BDBDBD" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 2. Biểu đồ Nhiệt độ -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+                    <TextView android:text="Nhiệt độ" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="29°C" android:textStyle="bold" android:textColor="#2E7D32" android:textSize="18sp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <!-- Không gian chứa LineChart sau này -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="140dp" android:orientation="vertical" android:gravity="center" android:background="#F9F9F9">
+                    <TextView android:text="(Vùng vẽ biểu đồ LineChart)" android:textColor="#BDBDBD" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 3. Biểu đồ Độ ẩm không khí -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+                    <TextView android:text="Độ ẩm không khí" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="68%" android:textStyle="bold" android:textColor="#2E7D32" android:textSize="18sp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <!-- Không gian chứa LineChart sau này -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="140dp" android:orientation="vertical" android:gravity="center" android:background="#F9F9F9">
+                    <TextView android:text="(Vùng vẽ biểu đồ LineChart)" android:textColor="#BDBDBD" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Footer Note -->
+        <TextView android:text="Dữ liệu đến 09:40 - Đơn vị hiển thị trên trục giá trị. Các điểm là trung bình theo giờ; điểm cuối là lần đo mới nhất." android:textSize="11sp" android:textColor="#757575" android:lineSpacingExtra="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

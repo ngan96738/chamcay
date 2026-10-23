@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="48dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true">
+                <TextView android:text="←" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:text="15 · Lịch &amp; Thông báo" android:textSize="12sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Thông báo" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:text="✔️" android:textSize="20sp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <!-- Bộ lọc Tab (Tất cả / Chưa đọc) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="#EFEBE9"
+            android:padding="3dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp"
+            android:weightSum="2">
+
+            <TextView android:text="Tất cả" android:background="@android:color/white" android:textStyle="bold" android:textColor="#1E392A" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+            <TextView android:text="Chưa đọc (2)" android:textColor="#757575" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- Tiêu đề phân mục -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <TextView android:text="Hôm nay" android:textSize="16sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Đọc tất cả" android:textSize="12sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <!-- Item 1: Tưới cây (Chưa đọc) -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                    <TextView android:id="@+id/icon1" android:text="💧" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:layout_toEndOf="@id/icon1" android:layout_toStartOf="@+id/dot1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:text="Đã đến lịch tưới cây Monstera" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="08/10/2026 · 09:00" android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/dot1" android:text="●" android:textSize="12sp" android:textColor="#2E7D32" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <TextView android:text="Nhắc trước trong ngày · Lịch tưới lúc 17:30." android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Xem lịch chăm sóc →" android:textSize="12sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Item 2: Bón phân (Chưa đọc) -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                    <TextView android:id="@+id/icon2" android:text="🌱" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:layout_toEndOf="@id/icon2" android:layout_toStartOf="@+id/dot2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:text="Đã đến lịch bón phân" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="08/10/2026 · 08:45" android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/dot2" android:text="●" android:textSize="12sp" android:textColor="#2E7D32" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <TextView android:text="Trầu bà · Lịch bón phân lúc 18:00." android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Xem lịch chăm sóc →" android:textSize="12sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Item 3: Cảnh báo độ ẩm -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                    <TextView android:id="@+id/icon3" android:text="⚠️" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:layout_toEndOf="@id/icon3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:text="Độ ẩm đất đang thấp" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="05/10/2026 · 16:20" android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <TextView android:text="Monstera lúc đó: 35%. Đã tưới ngày 06/10; hiện tại 52%." android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Xem tình trạng cây →" android:textSize="12sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Item 4: Hành trình phát triển -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                    <TextView android:id="@+id/icon4" android:text="🖼️" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:layout_toEndOf="@id/icon4" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:text="Đã lưu ảnh hành trình" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="01/10/2026 · 10:00" android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <TextView android:text="Monstera · Tháng 2 đã được cập nhật." android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Xem hành trình →" android:textSize="12sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Footer -->
+        <TextView android:text="Bạn đã xem hết thông báo gần đây." android:textSize="11sp" android:textColor="#757575" android:layout_gravity="center_horizontal" android:layout_marginBottom="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>
