@@ -22,13 +22,13 @@
 
         <!-- Họ và tên -->
         <TextView android:text="Họ và tên" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:background="@null" android:text="Nguyên" android:textColor="#1E392A" android:padding="12dp" android:textSize="14sp" android:inputType="text"/>
         </androidx.cardview.widget.CardView>
 
         <!-- Email -->
         <TextView android:text="Email" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:background="@null" android:text="nguyen@gmail.com" android:textColor="#1E392A" android:padding="12dp" android:textSize="14sp" android:inputType="textEmailAddress"/>
         </androidx.cardview.widget.CardView>
 

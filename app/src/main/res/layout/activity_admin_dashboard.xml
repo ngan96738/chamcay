@@ -29,10 +29,8 @@
                 android:gravity="center_vertical"
                 android:layout_marginBottom="16dp">
                 <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
-                    <TextView android:text="27 · Quản trị" android:textSize="12sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                     <TextView android:text="Tổng quan quản trị" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 </LinearLayout>
-                <TextView android:text="🛡️" android:textSize="24sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <!-- Tag Quản trị viên & Thời gian -->
@@ -80,7 +78,7 @@
             <!-- Grid 2x2 Thống kê -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="12dp">
                 <!-- Tổng số người dùng -->
-                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
                     <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:text="Tổng số người dùng" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                         <TextView android:text="128" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
@@ -88,7 +86,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <!-- Tổng số cây -->
-                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
                     <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:text="Tổng số cây" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                         <TextView android:text="436" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
@@ -99,7 +97,7 @@
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="16dp">
                 <!-- Tổng số nhật ký -->
-                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
                     <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:text="Tổng số nhật ký" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                         <TextView android:text="1.284" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
@@ -107,7 +105,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <!-- Số thiết bị IoT -->
-                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="6dp" app:cardCornerRadius="16dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
                     <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TextView android:text="Số thiết bị IoT" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                         <TextView android:text="36" android:textSize="28sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
@@ -123,9 +121,7 @@
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardStrokeWidth="1dp"
-                app:cardStrokeColor="#E0E0E0">
+                app:cardBackgroundColor="@android:color/white">
                 <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TextView android:text="Hoạt động hệ thống gần đây" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_marginBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 

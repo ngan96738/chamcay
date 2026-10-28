@@ -65,9 +65,7 @@
             android:layout_marginBottom="14dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardStrokeWidth="1dp"
-            app:cardStrokeColor="#E0E0E0">
+            app:cardBackgroundColor="@android:color/white">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -94,9 +92,7 @@
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardStrokeWidth="1dp"
-            app:cardStrokeColor="#E0E0E0">
+            app:cardBackgroundColor="@android:color/white">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

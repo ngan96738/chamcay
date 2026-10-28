@@ -7,25 +7,36 @@
     android:fillViewport="true">
 
     <LinearLayout
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:paddingTop="48dp"> <!-- Đẩy khoảng cách an toàn cho camera -->
+        android:paddingTop="48dp">
 
-        <TextView android:text="02 · Xác thực" android:textColor="#757575" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         <TextView android:text="Plant Care" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
-        <!-- Card Logo (Dùng Emoji) -->
+        <!-- Biểu tượng chính -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="140dp"
             android:layout_marginTop="24dp"
             app:cardBackgroundColor="#E8F5E9"
             app:cardCornerRadius="16dp"
             app:cardElevation="0dp">
-            <TextView android:text="🌱" android:textSize="40sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!-- Vòng tròn nền trắng giữa -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="36dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardElevation="0dp">
+                    <TextView android:text="🌱" android:textSize="32sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
         </androidx.cardview.widget.CardView>
 
         <TextView android:text="Chào mừng trở lại" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
@@ -33,47 +44,65 @@
 
         <!-- Ô nhập Email -->
         <TextView android:text="Email" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
-            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:background="@null" android:hint="nguyen@gmail.com" android:textSize="14sp" android:inputType="textEmailAddress"/>
-                <TextView android:text="✉️" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardMaxElevation="0dp">
+            <LinearLayout android:orientation="horizontal" android:paddingHorizontal="16dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="52dp">
+                <EditText android:id="@+id/edtEmail" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@null" android:hint="nguyen@gmail.com" android:textSize="14sp" android:inputType="textEmailAddress"/>
+                <TextView android:text="✉️" android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Ô nhập Mật khẩu -->
         <TextView android:text="Mật khẩu" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
-            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:background="@null" android:hint="••••••••" android:inputType="textPassword" android:textSize="14sp"/>
-                <TextView android:text="👁️" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="horizontal" android:paddingHorizontal="16dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="52dp">
+                <EditText android:id="@+id/edtPassword" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@null" android:hint="••••••••" android:inputType="textPassword" android:textSize="14sp"/>
+                <TextView android:text="👁️" android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <TextView android:text="Quên mật khẩu?" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!-- Quên mật khẩu -->
+        <TextView android:text="Quên mật khẩu?" android:textColor="#2E7D32" android:textSize="13sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_marginTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
         <!-- Nút Đăng nhập -->
-        <Button android:text="Đăng nhập" android:backgroundTint="#2E7D32" android:textColor="@android:color/white" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="55dp" app:cornerRadius="12dp"/>
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="Đăng nhập"
+            android:backgroundTint="#1E392A"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:cornerRadius="12dp"/>
 
-        <TextView android:text="Chưa có tài khoản? Đăng ký" android:textColor="#757575" android:textSize="12sp" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!-- Chưa có tài khoản -->
+        <TextView android:text="Chưa có tài khoản? Đăng ký" android:textColor="#757575" android:textSize="13sp" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
-        <!-- Card Đăng nhập quản trị -->
+        <!-- Đăng nhập quản trị -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             app:cardCornerRadius="12dp"
-            app:cardBackgroundColor="#F1F8E9"
+            app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="0dp">
-            <LinearLayout android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="🛡️" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <!-- Border ảo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_admin_border"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+                <TextView android:text="🛡️" android:textSize="24sp" android:layout_marginEnd="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
-                    <TextView android:text="Đăng nhập quản trị" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                    <TextView android:text="Dành cho tài khoản quản trị viên được cấp." android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Đăng nhập quản trị" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Dành cho tài khoản quản trị viên được cấp." android:textSize="11sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 </LinearLayout>
-                <TextView android:text="❯" android:textStyle="bold" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="❯" android:textStyle="bold" android:textSize="18sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <TextView android:text="Khu vườn cá nhân luôn thuộc về bạn." android:textSize="10sp" android:textColor="#9E9E9E" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:layout_marginBottom="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="Khu vườn cá nhân luôn thuộc về bạn." android:textSize="11sp" android:textColor="#9E9E9E" android:layout_gravity="center_horizontal" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
     </LinearLayout>
 </ScrollView>

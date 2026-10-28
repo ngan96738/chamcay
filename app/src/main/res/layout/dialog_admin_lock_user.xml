@@ -3,30 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="24dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="8dp"
-    app:cardBackgroundColor="@android:color/white">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="12dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
 
     <LinearLayout
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
 
-        <!-- Header -->
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
-            <TextView android:text="Khóa tài khoản?" android:textSize="18sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <TextView android:text="✕" android:textSize="18sp" android:textColor="#757575" android:textStyle="bold" android:layout_alignParentEnd="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!-- Header: Tiêu đề & Nút Đóng (X) -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Khóa tài khoản?"
+                android:textColor="#212529"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnCloseDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:text="✕"
+                android:textColor="#70757A"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
-        <!-- Mô tả -->
-        <TextView android:text="Khóa tài khoản Minh Anh\n(minhanh@gmail.com)?" android:textStyle="bold" android:textColor="#1E392A" android:textSize="14sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!-- Mô tả đối tượng bị khóa -->
+        <TextView
+            android:id="@+id/tvLockAccountInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:lineSpacingExtra="3dp"
+            android:text="Khóa tài khoản Minh Anh\n(minhanh@gmail.com)?"
+            android:textColor="#212529"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        <TextView android:text="Người dùng không thể đăng nhập cho đến khi được mở khóa. Dữ liệu vẫn được lưu." android:textColor="#757575" android:textSize="13sp" android:lineSpacingExtra="2dp" android:layout_marginBottom="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!-- Ghi chú giải thích tác động -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="2dp"
+            android:text="Người dùng không thể đăng nhập cho đến khi được mở khóa. Dữ liệu vẫn được lưu giữ an toàn."
+            android:textColor="#70757A"
+            android:textSize="12sp" />
 
-        <!-- Hai nút bấm nằm ngang -->
+        <!-- Hai nút bấm ngang tỉ lệ 50-50 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,25 +75,29 @@
             android:weightSum="2">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="6dp"
-                android:backgroundTint="#E8F5E9"
+                android:layout_weight="1"
+                android:backgroundTint="#EBF4EC"
                 android:text="Hủy"
-                android:textColor="#2E7D32"
+                android:textColor="#2D6A4F"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="12dp"
                 app:elevation="0dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirmLock"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="6dp"
+                android:layout_weight="1"
                 android:backgroundTint="#FFEBEE"
-                android:text="Khóa tài khoản"
+                android:text="Khóa"
                 android:textColor="#D32F2F"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="12dp"
                 app:elevation="0dp" />

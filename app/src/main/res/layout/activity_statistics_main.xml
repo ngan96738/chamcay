@@ -22,7 +22,12 @@
             android:orientation="vertical">
 
             <!-- Header -->
-            <TextView android:text="23 · Thống kê" android:textSize="12sp" android:textColor="#757575" android:layout_marginBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="#757575"
+                android:textSize="12sp" />
             <TextView android:text="Thống kê chăm sóc" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginBottom="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
             <!-- Bộ lọc thời gian -->
@@ -110,42 +115,5 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Thanh điều hướng dưới cùng (Bottom Navigation Placeholder) -->
-    <LinearLayout
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/white"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:elevation="8dp">
-
-        <!-- Các nút Trang chủ, Cây của tôi, Lịch, Thống kê (Active), Tài khoản -->
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
-            <TextView android:text="🏠" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <TextView android:text="Trang chủ" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
-            <TextView android:text="🌱" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <TextView android:text="Cây của tôi" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
-            <TextView android:text="📅" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <TextView android:text="Lịch" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!-- Active Tab: Thống kê -->
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
-            <TextView android:text="📈" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <TextView android:text="Thống kê" android:textSize="10sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
-            <TextView android:text="👤" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <TextView android:text="Tài khoản" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

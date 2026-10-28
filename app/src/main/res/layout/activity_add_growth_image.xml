@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F6F7F1"
+    android:background="#F6F7F3"
     android:fillViewport="true">
 
     <LinearLayout
@@ -11,187 +11,270 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        android:paddingTop="48dp">
+        android:paddingTop="36dp">
 
-        <TextView android:text="←" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-
-
-        <TextView android:text="Thêm ảnh hành trình" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
-
-        <!-- Huy hiệu -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#E8F5E9"
-            android:paddingStart="10dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="4dp"
-            android:text="Monstera · Bộ ảnh cá nhân"
-            android:textColor="#2E7D32"
-            android:textSize="10sp"
-            android:textStyle="bold" />
-
-        <!-- Khung ảnh lớn xem trước -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="0dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardStrokeWidth="1dp"
-            app:cardStrokeColor="#E0E0E0">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_monstera" />
-        </androidx.cardview.widget.CardView>
-
-        <!-- 2 Nút: Chụp ảnh & Thư viện -->
+        <!-- Nút Quay lại & Tiêu đề -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="12dp"
+                android:text="←"
+                android:textColor="#212529"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm ảnh hành trình"
+                android:textColor="#212529"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Huy hiệu cây trồng -->
+        <TextView
+            android:id="@+id/tvBadgePlant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#EBF4EC"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:text="Monstera · Bộ ảnh cá nhân"
+            android:textColor="#2D6A4F"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Khung chọn ảnh trống (Giữ bố cục hình 2 + Màu hình 1) -->
+        <FrameLayout
+            android:id="@+id/layoutImagePlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_dashed_border">
+
+            <!-- ImageView để hiển thị ảnh sau khi chọn -->
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <!-- Nội dung gợi ý tải ảnh -->
+            <LinearLayout
+                android:id="@+id/layoutUploadHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="➕"
+                    android:textColor="#2D6A4F"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tải lên ảnh hành trình mới"
+                    android:textColor="#2D6A4F"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Nhấp hoặc chụp để chọn ảnh"
+                    android:textColor="#9E9E9E"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 2 Nút: Chụp ảnh & Thư viện (Màu nền xanh rêu nhạt #EBF4EC chuẩn hình 1) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnCamera"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#EBF4EC"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardStrokeWidth="1dp"
-                app:cardStrokeColor="#E0E0E0">
+                app:cardElevation="0dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="📷 "
-                        android:textSize="14sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Chụp ảnh"
-                        android:textStyle="bold"
-                        android:textColor="#1E392A"
-                        android:textSize="13sp"/>
+                        android:text="📷  Chụp ảnh"
+                        android:textColor="#2D6A4F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnGallery"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#EBF4EC"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardStrokeWidth="1dp"
-                app:cardStrokeColor="#E0E0E0">
+                app:cardElevation="0dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <!-- Đã bổ sung layout_width và layout_height cho TextView chứa icon -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🖼️ "
-                        android:textSize="14sp"/>
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Thư viện"
-                        android:textStyle="bold"
-                        android:textColor="#1E392A"
-                        android:textSize="13sp"/>
+                        android:text="🖼️  Thư viện"
+                        android:textColor="#2D6A4F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
         <!-- Ngày chụp -->
         <TextView
-            android:text="Ngày chụp"
-            android:textStyle="bold"
-            android:textColor="#1E392A"
-            android:textSize="12sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Ngày chụp"
+            android:textColor="#212529"
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:layout_marginBottom="14dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
+            android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@android:color/white"
-            app:cardStrokeWidth="1dp"
-            app:cardStrokeColor="#E0E0E0">
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:padding="12dp"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
 
-                <!-- Đã xóa android:height="26dp" và thêm minHeight="48dp" để đúng chuẩn Android -->
                 <EditText
+                    android:id="@+id/etCaptureDate"
                     android:layout_width="0dp"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:minHeight="50dp"
                     android:background="@null"
-                    android:hint="08/10/2026"
-                    android:textColorHint="#757575"
-                    android:textSize="14sp"
-                    android:inputType="date"/>
+                    android:hint="Chọn ngày chụp (VD: 28/10/2026)"
+                    android:inputType="date"
+                    android:textColor="#212529"
+                    android:textColorHint="#9E9E9E"
+                    android:textSize="14sp" />
 
                 <TextView
-                    android:text="📅"
-                    android:textSize="16sp"
+                    android:id="@+id/btnDatePicker"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Tuần / tháng -->
-        <TextView android:text="Tuần / tháng" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
-            <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="Tuần 6 · Tháng 2" android:textSize="14sp" android:textColor="#1E392A" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
-                <TextView android:text="▾" android:textSize="16sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="📅"
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Ghi chú -->
-        <TextView android:text="Ghi chú" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="20dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
-            <EditText android:layout_width="match_parent" android:layout_height="80dp" android:background="@null" android:gravity="top|start" android:hint="Lá mới đã mở hoàn toàn. Cây đón sáng tốt." android:padding="12dp" android:textSize="14sp" android:inputType="textMultiLine"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ghi chú"
+            android:textColor="#212529"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="Nhập tình trạng cây, chiếc lá mới hoặc lưu ý chăm sóc..."
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textColor="#212529"
+                android:textColorHint="#9E9E9E"
+                android:textSize="14sp" />
         </androidx.cardview.widget.CardView>
 
-        <!-- Nút Lưu ảnh hành trình -->
-        <Button android:layout_width="match_parent" android:layout_height="50dp" android:backgroundTint="#2E7D32" android:text="Lưu ảnh hành trình" android:textColor="@android:color/white" android:textStyle="bold" app:cornerRadius="12dp" android:layout_marginBottom="8dp"/>
+        <!-- Nút Lưu ảnh (Màu xanh đậm đặc trưng #2D6A4F chuẩn hình 1) -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#2D6A4F"
+            android:text="LƯU ẢNH HÀNH TRÌNH"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
 
-        <TextView android:text="Ảnh chỉ dùng cho hành trình phát triển." android:textSize="10sp" android:textColor="#757575" android:layout_gravity="center_horizontal" android:layout_marginBottom="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:text="Ảnh chỉ dùng cho nhật ký hành trình phát triển."
+            android:textColor="#70757A"
+            android:textSize="11sp" />
 
     </LinearLayout>
 </ScrollView>

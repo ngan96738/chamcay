@@ -1,26 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1. Quyền mạng -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 2. Quyền Camera & Bộ nhớ ảnh (Tương thích Android 13/14+) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Đọc ảnh dành cho Android 12 trở xuống -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- Đọc ảnh dành cho Android 13+ -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- Khai báo phần cứng Camera (Khắc phục lỗi Permission exists without corresponding hardware) -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Chamcay">
+        android:theme="@style/Theme.ChamCay">
+
+        <!-- 1. Màn hình Đăng nhập -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 2. Màn hình Trang chủ -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- 3. Quản lý cây trồng & Nhật ký -->
+        <activity
+            android:name=".MyPlantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlantDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CareLogActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 4. Nhóm AI -->
+        <activity
+            android:name=".AiHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AiResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AiScheduleProposalActivity"
+            android:exported="false" />
+
+        <!-- 5. Thông báo & Hành trình -->
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GrowthJourneyActivity"
+            android:exported="false" />
+
+        <!-- 6. Nhóm IoT -->
+        <activity
+            android:name=".IotMonitoringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IotSensorDetailsActivity"
+            android:exported="false" />
+
+        <!--
+           LƯU Ý: Các Activity dưới đây chỉ mở comment ra khi bạn ĐÃ TẠO FILE CODE (.kt):
+
+           <activity android:name=".AddPlantActivity" android:exported="false" />
+           <activity android:name=".AccountActivity" android:exported="false" />
+           <activity android:name=".ForgotPasswordActivity" android:exported="false" />
+           <activity android:name=".AiCareInputActivity" android:exported="false" />
+           <activity android:name=".AddGrowthImageActivity" android:exported="false" />
+           <activity android:name=".IotPumpControlActivity" android:exported="false" />
+        -->
+
     </application>
 
 </manifest>

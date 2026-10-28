@@ -1,22 +1,58 @@
-package com.example.chamcay // Nhớ giữ nguyên package name của bạn ở dòng 1
+package com.example.chamcay
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Tạm thời đóng băng (ẩn) toàn bộ code Firebase và ánh xạ giao diện cũ
-        // để kiểm tra xem giao diện trang chủ mới có hiển thị thành công trên máy ảo không.
+        // 1. Bấm vào phần Môi trường (Cảm biến) -> Chuyển sang Giám sát IoT
+        findViewById<View>(R.id.cardIotMonitoring)?.setOnClickListener {
+            startActivity(Intent(this, IotMonitoringActivity::class.java))
+        }
 
-        /*
-        // Khi nào cần kết nối dữ liệu thật, chúng ta sẽ mở lại và sửa ID sau:
-        tvSoilPercent = findViewById(R.id.tvSoilPercent)
-        tvTemperature = findViewById(R.id.tvTemperature)
-        ...
-        */
+        // 2. Bấm vào nút Thêm cây -> Chuyển sang màn hình danh sách cây
+        findViewById<View>(R.id.btnAddPlant)?.setOnClickListener {
+            startActivity(Intent(this, MyPlantsActivity::class.java))
+        }
+
+        // 3. Bấm vào AI tư vấn -> Chuyển sang lịch sử AI
+        findViewById<View>(R.id.btnAiConsult)?.setOnClickListener {
+            startActivity(Intent(this, AiHistoryActivity::class.java))
+        }
+
+        // 4. Bấm vào biểu tượng Thông báo (chuông) ở góc trên
+        findViewById<View>(R.id.btnNotification)?.setOnClickListener {
+            startActivity(Intent(this, NotificationsActivity::class.java))
+        }
+
+        // 5. Điều hướng thanh menu dưới cùng (Bottom Navigation)
+        findViewById<View>(R.id.navHome)?.setOnClickListener {
+            // Đang ở Trang chủ
+        }
+
+        // Tab Cây của tôi -> Mở danh sách cây (activity_my_plants)
+        findViewById<View>(R.id.navPlants)?.setOnClickListener {
+            startActivity(Intent(this, MyPlantsActivity::class.java))
+        }
+
+        // Tab Nhật ký -> Mở màn hình nhật ký chăm sóc (CareLogActivity)
+        findViewById<View>(R.id.navDiary)?.setOnClickListener {
+            startActivity(Intent(this, CareLogActivity::class.java))
+        }
+
+        // Tab Thống kê -> Mở hành trình phát triển
+        findViewById<View>(R.id.navStats)?.setOnClickListener {
+            startActivity(Intent(this, GrowthJourneyActivity::class.java))
+        }
+
+        // Tab Tài khoản
+        findViewById<View>(R.id.navAccount)?.setOnClickListener {
+            // Xử lý màn hình tài khoản nếu có
+        }
     }
 }

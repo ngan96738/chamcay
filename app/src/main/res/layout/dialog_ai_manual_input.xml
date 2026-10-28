@@ -23,7 +23,7 @@
 
         <!-- Loại cây -->
         <TextView android:text="Loại cây" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
             <LinearLayout android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
                 <TextView android:text="Cây lá" android:textSize="14sp" android:textColor="#757575" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
                 <TextView android:text="▾" android:textSize="16sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
@@ -32,7 +32,7 @@
 
         <!-- Vị trí / Ánh sáng -->
         <TextView android:text="Vị trí / Ánh sáng" android:textStyle="bold" android:textColor="#1E392A" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white" app:cardStrokeWidth="1dp" app:cardStrokeColor="#E0E0E0">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="12dp" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardBackgroundColor="@android:color/white">
             <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:background="@null" android:hint="Gần cửa sổ · Ánh sáng gián tiếp" android:padding="12dp" android:textSize="14sp" android:inputType="text"/>
         </androidx.cardview.widget.CardView>
 

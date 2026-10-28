@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">chamcay</string>
+    <string name="app_name">Chăm Cây</string>
+    <!-- Mảng danh sách loại cây -->
+    <string-array name="plant_types">
+        <item>Cây thân gỗ</item>
+        <item>Cây thân leo</item>
+        <item>Cây ăn quả</item>
+        <item>Cây lương thực</item>
+        <item>Cây lá / Kiểng lá</item>
+        <item>Sen đá / Xương rồng</item>
+    </string-array>
+
+    <!-- Mảng 2 lựa chọn điều kiện ánh sáng -->
+    <string-array name="light_conditions">
+        <item>Ánh sáng trực tiếp</item>
+        <item>Ánh sáng gián tiếp</item>
+    </string-array>
 </resources>
