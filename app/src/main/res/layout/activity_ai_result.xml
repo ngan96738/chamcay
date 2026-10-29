@@ -152,18 +152,21 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
+        <!-- Trước đây: "Xem lịch đề xuất" (đã bỏ Lịch) -> chuyển sang Nhật ký chăm sóc -->
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddToCareLog"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
             android:layout_marginEnd="6dp"
             android:backgroundTint="#2E7D32"
-            android:text="Xem lịch đề xuất"
+            android:text="Thêm vào nhật ký"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveConsult"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"

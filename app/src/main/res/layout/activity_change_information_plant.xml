@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Thêm cây mới"
+            android:text="Chỉnh sửa thông tin cây"
             android:textColor="#212529"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -309,7 +309,7 @@
             android:layout_height="52dp"
             android:layout_marginBottom="12dp"
             android:backgroundTint="#2D6A4F"
-            android:text="THÊM CÂY MỚI"
+            android:text="CHỈNH SỬA CÂY"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:textStyle="bold"

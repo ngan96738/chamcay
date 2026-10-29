@@ -26,14 +26,17 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#1E392A" />
+            <!-- Nút Đóng (Đã thêm id btnClose) -->
             <TextView
+                android:id="@+id/btnClose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="X"
                 android:textSize="18sp"
                 android:textColor="#757575"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:padding="4dp" />
         </RelativeLayout>
 
         <!-- Huy hiệu trạng thái -->
@@ -50,7 +53,7 @@
             android:paddingBottom="4dp"
             android:layout_marginBottom="16dp" />
 
-        <!-- Field: Tên cây -->
+        <!-- Field: Tên cây (Đã thêm id etPlantName) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,6 +70,7 @@
             app:cardElevation="0dp"
             app:cardBackgroundColor="@android:color/white">
             <EditText
+                android:id="@+id/etPlantName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
@@ -77,7 +81,7 @@
                 android:inputType="text" />
         </androidx.cardview.widget.CardView>
 
-        <!-- Field: Ngày trồng -->
+        <!-- Field: Ngày trồng (Đã thêm id etPlantDate và btnDatePicker) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,6 +103,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
                 <EditText
+                    android:id="@+id/etPlantDate"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -109,11 +114,13 @@
                     android:textSize="14sp"
                     android:inputType="date" />
                 <TextView
+                    android:id="@+id/btnDatePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="12dp"
                     android:text="📅"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:padding="4dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -126,8 +133,9 @@
             android:textColor="#757575"
             android:textSize="11sp" />
 
-        <!-- Nút Lưu -->
+        <!-- Nút Lưu (Đã thêm id btnSavePlant) -->
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSavePlant"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:backgroundTint="#2E7D32"

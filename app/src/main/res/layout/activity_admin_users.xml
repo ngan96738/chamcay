@@ -29,10 +29,18 @@
                 android:gravity="center_vertical"
                 android:layout_marginBottom="16dp">
 
-                <TextView android:text="←" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/btnBack"
+                    android:text="←"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E392A"
+                    android:layout_marginEnd="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"/>
 
                 <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content">
-
                     <TextView android:text="Quản lý người dùng" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 </LinearLayout>
 
@@ -55,6 +63,7 @@
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp">
                     <EditText
+                        android:id="@+id/etSearchUser"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -79,9 +88,9 @@
                 app:cardCornerRadius="10dp"
                 android:weightSum="3">
 
-                <TextView android:text="Tất cả (128)" android:background="@android:color/white" android:textStyle="bold" android:textColor="#1E392A" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
-                <TextView android:text="Hoạt động" android:textColor="#424242" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
-                <TextView android:text="Đã khóa" android:textColor="#424242" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+                <TextView android:id="@+id/tabAll" android:text="Tất cả (128)" android:background="@android:color/white" android:textStyle="bold" android:textColor="#1E392A" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+                <TextView android:id="@+id/tabActive" android:text="Hoạt động" android:textColor="#424242" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
+                <TextView android:id="@+id/tabLocked" android:text="Đã khóa" android:textColor="#424242" android:gravity="center" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
             </LinearLayout>
 
             <!-- Danh sách người dùng -->
@@ -191,17 +200,35 @@
         android:weightSum="3"
         android:elevation="8dp">
 
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+        <LinearLayout
+            android:id="@+id/navOverview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
             <TextView android:text="🛡️" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             <TextView android:text="Tổng quan" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         </LinearLayout>
 
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+        <LinearLayout
+            android:id="@+id/navAdminUsers"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
             <TextView android:text="👥" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             <TextView android:text="Người dùng" android:textSize="10sp" android:textStyle="bold" android:textColor="#2E7D32" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         </LinearLayout>
 
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+        <LinearLayout
+            android:id="@+id/navAdminLogout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
             <TextView android:text="🚪" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
             <TextView android:text="Tài khoản / Thoát" android:textSize="10sp" android:textColor="#757575" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
         </LinearLayout>

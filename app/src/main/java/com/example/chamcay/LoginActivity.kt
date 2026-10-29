@@ -2,9 +2,9 @@ package com.example.chamcay
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -12,21 +12,25 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val edtEmail = findViewById<EditText>(R.id.edtEmail)
-        val edtPassword = findViewById<EditText>(R.id.edtPassword)
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        // Nút Đăng nhập -> Mở trang chủ MainActivity
+        findViewById<Button>(R.id.btnLogin)?.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
 
-        btnLogin?.setOnClickListener {
-            val email = edtEmail?.text.toString().trim()
-            val password = edtPassword?.text.toString().trim()
+        // Chữ "Quên mật khẩu?" -> Mở trang Quên mật khẩu
+        findViewById<TextView>(R.id.tvForgotPassword)?.setOnClickListener {
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
+        }
 
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
+        // Chữ "Tạo tài khoản mới" / "Đăng ký" -> Mở trang Đăng ký
+        findViewById<TextView>(R.id.tvRegister)?.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
+        // Khối "Đăng nhập dành cho Quản trị viên" -> Mở trang Admin
+        findViewById<View>(R.id.layoutAdminLogin)?.setOnClickListener {
+            startActivity(Intent(this, AdminDashboardActivity::class.java))
         }
     }
 }

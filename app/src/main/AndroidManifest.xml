@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 1. Quyền mạng -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- 2. Quyền Camera & Bộ nhớ ảnh (Tương thích Android 13/14+) -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <!-- Đọc ảnh dành cho Android 12 trở xuống -->
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-    <!-- Đọc ảnh dành cho Android 13+ -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
-    <!-- Khai báo phần cứng Camera (Khắc phục lỗi Permission exists without corresponding hardware) -->
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -27,71 +17,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChamCay">
 
-        <!-- 1. Màn hình Đăng nhập -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+        <!-- Màn hình khởi động -->
+        <activity android:name=".SplashActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- 2. Màn hình Trang chủ -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+        <!-- Xác thực tài khoản -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".ForgotPasswordActivity" android:exported="false" />
+        <activity android:name=".AccountActivity" android:exported="false" />
 
-        <!-- 3. Quản lý cây trồng & Nhật ký -->
-        <activity
-            android:name=".MyPlantsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PlantDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CareLogActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+        <!-- Chức năng chính -->
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".NotificationsActivity" android:exported="false" />
+        <activity android:name=".MyPlantsActivity" android:exported="false" />
+        <activity android:name=".PlantDetailActivity" android:exported="false" />
+        <activity android:name=".ChangeInformationPlantActivity" android:exported="false" />
 
-        <!-- 4. Nhóm AI -->
-        <activity
-            android:name=".AiHistoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AiResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AiScheduleProposalActivity"
-            android:exported="false" />
+        <!-- Nhật ký & Thống kê -->
+        <activity android:name=".CareLogActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".GrowthJourneyActivity" android:exported="false" />
+        <activity android:name=".AddGrowthImageActivity" android:exported="false" />
+        <activity android:name=".StatisticsMainActivity" android:exported="false" />
+        <activity android:name=".StatisticsChartsActivity" android:exported="false" />
 
-        <!-- 5. Thông báo & Hành trình -->
-        <activity
-            android:name=".NotificationsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GrowthJourneyActivity"
-            android:exported="false" />
+        <!-- Trợ lý AI -->
+        <activity android:name=".AiCareInputActivity" android:exported="false" />
+        <activity android:name=".AiHistoryActivity" android:exported="false" />
+        <activity android:name=".AiResultActivity" android:exported="false" />
+        <activity android:name=".AiScheduleProposalActivity" android:exported="false" />
 
-        <!-- 6. Nhóm IoT -->
-        <activity
-            android:name=".IotMonitoringActivity"
-            android:exported="false" />
-        <activity
-            android:name=".IotSensorDetailsActivity"
-            android:exported="false" />
+        <!-- Giám sát IoT -->
+        <activity android:name=".IotMonitoringActivity" android:exported="false" />
+        <activity android:name=".IotSensorDetailsActivity" android:exported="false" />
 
-        <!--
-           LƯU Ý: Các Activity dưới đây chỉ mở comment ra khi bạn ĐÃ TẠO FILE CODE (.kt):
-
-           <activity android:name=".AddPlantActivity" android:exported="false" />
-           <activity android:name=".AccountActivity" android:exported="false" />
-           <activity android:name=".ForgotPasswordActivity" android:exported="false" />
-           <activity android:name=".AiCareInputActivity" android:exported="false" />
-           <activity android:name=".AddGrowthImageActivity" android:exported="false" />
-           <activity android:name=".IotPumpControlActivity" android:exported="false" />
-        -->
+        <!-- Quản trị viên -->
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".AdminUsersActivity" android:exported="false" />
 
     </application>
-
 </manifest>

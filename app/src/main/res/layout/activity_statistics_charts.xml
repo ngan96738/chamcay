@@ -23,7 +23,17 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="20dp">
 
-            <TextView android:text="←" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_marginEnd="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <!-- Đã thêm id btnBack ở đây -->
+            <TextView
+                android:id="@+id/btnBack"
+                android:text="←"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1E392A"
+                android:layout_marginEnd="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"/>
 
             <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
                 <TextView android:text="Biểu đồ" android:textSize="24sp" android:textStyle="bold" android:textColor="#1E392A" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
